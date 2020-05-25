@@ -1,0 +1,23 @@
+.UpperNav {
+  display: flex;
+  justify-content: space-between;
+
+  .Logo {
+    margin: auto 10px;
+    margin-left: 20px;
+  }
+  .WrapSearch {
+    display: flex;
+    .Social {
+      display: flex;
+      margin: auto 10px;
+      div {
+        margin-right: 10px;
+      }
+      justify-content: space-evenly;
+      i {
+        color: black;
+      }
+    }
+  }
+}

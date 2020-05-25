@@ -1,0 +1,17 @@
+.LowerNav {
+  ul {
+    display: flex;
+
+    border-bottom: #ccc 1px solid;
+    a {
+      padding: 5px;
+      margin-right: 15px;
+      color: rgb(65, 65, 65);
+      font-size: 1.2rem;
+      &:hover {
+        color: rgb(37, 255, 37);
+        border-bottom: rgb(37, 255, 37) 3px solid;
+      }
+    }
+  }
+}
