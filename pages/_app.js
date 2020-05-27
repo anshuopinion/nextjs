@@ -1,11 +1,23 @@
 
 import Header from '../components/Header'
+import '../sass/main.scss'
+import fetch from 'isomorphic-unfetch'
+import getConfig from 'next/config'
+const MyApp = ({ Component, pageProps,navigations })=>{
 
-const MyApp = ({ Component, pageProps }) => (
+  
+  return(
   <>
-    <Header/>
+    <Header navigations={navigations}/>
     <Component {...pageProps} />
-  </>
-);
+  </>)
+};
 
-export default MyApp;
+const {publicRuntimeConfig} = getConfig()
+MyApp.getInitialProps = async () =>{
+  const res = await fetch(`${publicRuntimeConfig.API_URL}/navigations`)
+  const navigations = await res.json()
+  return{navigations}
+}
+
+export default MyApp

@@ -8,10 +8,18 @@
       margin-right: 15px;
       color: rgb(65, 65, 65);
       font-size: 1.2rem;
-      &:hover {
+      border-bottom: transparent solid 3px;
+      &:hover{
         color: rgb(37, 255, 37);
         border-bottom: rgb(37, 255, 37) 3px solid;
       }
+      
+      
     }
+    .active{
+      color: rgb(37, 255, 37);
+      border-bottom: rgb(37, 255, 37) 3px solid;
+    }
+    
   }
 }

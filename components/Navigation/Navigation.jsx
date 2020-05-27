@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./Navigation.module.scss";
 import { UpperNav, LowerNav } from "/";
-const Navigation = () => {
+const Navigation = ({navigations}) => {
   return (
-    <nav className={(styles.Navigation, "container")}>
+    <nav className={(styles.Navigation)}>
       <UpperNav />
-      <LowerNav />
+      <LowerNav navigations={navigations} />
     </nav>
   );
 };

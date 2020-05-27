@@ -4,6 +4,7 @@ import styles from "./UpperNav.module.scss";
 // import Logo from "../../../utils/Logo/Logo";
 import Logo from '../../../utils/Logo/Logo'
 import Search from "../../../utils/Search/Search";
+import Link from 'next/link'
 import {
   faTelegram,
   faYoutube,
@@ -15,7 +16,7 @@ const UpperNav = () => {
     {
       name: "Telegram",
       link: "https://telegram.me/anshuopinion",
-      icon: <FontAwesomeIcon icon={faTelegram} />,
+      icon: <FontAwesomeIcon icon={faTelegram} size="1x" />,
     },
     {
       name: "Youtube",
@@ -35,9 +36,11 @@ const UpperNav = () => {
   ];
   return (
     <div className={styles.UpperNav}>
-      <a href="/home" className={styles.Logo}>
+      <Link href="/">
+      <a  className={styles.Logo}>
         <Logo />
       </a>
+      </Link>
       <div className={styles.WrapSearch}>
         <div className={styles.Social}>
           {socialElement.map((social) => (

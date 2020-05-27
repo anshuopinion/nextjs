@@ -1,9 +1,8 @@
 import styles from './Card.module.scss'
 
 export default function Card({post}){
-const {API_URL}  = process.env;
 
-
+    const {API_URL} = process.env
     return(
         <>
         <div className={styles.PostCard}>
@@ -11,7 +10,7 @@ const {API_URL}  = process.env;
             />
             <div className={styles.Body}>
     <h3>{post.tittle}</h3>
-    <p dangerouslySetInnerHTML={{__html:post.description}}
+    <p dangerouslySetInnerHTML={{__html:post.description.substring(0,150)}}
 />
             </div>
 

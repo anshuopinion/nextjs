@@ -1,0 +1,9 @@
+.cardContainer{
+    max-width: 960px;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+grid-gap: 1rem;
+grid-auto-flow: dense;
+padding: 1rem;
+  }
