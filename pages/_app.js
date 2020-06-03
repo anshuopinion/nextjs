@@ -1,7 +1,6 @@
 import Header from '../components/Header';
 import '../sass/main.scss';
 import fetch from 'isomorphic-unfetch';
-import getConfig from 'next/config';
 import { config } from '@fortawesome/fontawesome-svg-core'; // 👈
 import '@fortawesome/fontawesome-svg-core/styles.css'; // 👈
 import 'slick-carousel/slick/slick.css';
@@ -19,9 +18,9 @@ const MyApp = ({ Component, pageProps, navigations }) => {
   );
 };
 
-const { publicRuntimeConfig } = getConfig();
 MyApp.getInitialProps = async () => {
-  const res = await fetch(`${publicRuntimeConfig.API_URL}/navigations`);
+  const { API_URL } = process.env;
+  const res = await fetch(`${API_URL}/navigations`);
   const navigations = await res.json();
   return { navigations: navigations };
 };
