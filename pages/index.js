@@ -1,9 +1,11 @@
-import fetch from 'isomorphic-unfetch';
 import Card from '../components/Card/Card';
+import fetch from 'isomorphic-unfetch';
 import styles from '../sass/index.module.scss';
+import Slider from '../components/SliderPost/SliderPost';
 const Home = ({ posts }) => {
   return (
-    <div className={styles.container}>
+    <div className="container">
+      <Slider posts={posts} />
       <div className={styles.cardContainer}>
         {posts.map((post) => (
           <Card key={post.id} post={post} />

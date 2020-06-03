@@ -1,19 +1,26 @@
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+  max-width: 960px;
+  margin: 0 auto;
+}
 ul {
-    list-style-type: none;
-  }
-  a {
-    text-decoration: none;
-  }
-  button {
-    border-radius: 5px;
-    color: #fff;
-    background-color: rgb(31, 255, 31);
-    padding: 0.5rem 3rem;
-    border: 1px solid;
-
-  }
-  
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border-radius: 5px;
+  color: #fff;
+  background-color: rgb(31, 255, 31);
+  padding: 0.5rem 3rem;
+  border: 1px solid;
+}
+.slick-next,
+.slick-prev {
+  background-color: black !important;
+  padding: 0 !important;
+  border-radius: 15px;
+  height: 30px !important;
+  width: 30px !important;
+  z-index: 2;
+}

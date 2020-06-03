@@ -11,7 +11,7 @@ export default function Card({ post }) {
       },
     ],
   } = post;
-  console.log(url);
+
   return (
     <>
       <Link href="/blog/[slug]" as={`/blog/${post.slug}`}>

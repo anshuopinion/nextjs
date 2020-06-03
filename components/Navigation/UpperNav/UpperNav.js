@@ -4,28 +4,29 @@ import styles from './UpperNav.module.scss';
 import Logo from '../../../utils/Logo/Logo';
 import Search from '../../../utils/Search/Search';
 import Link from 'next/link';
+
 import { faTelegram, faYoutube, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
 const UpperNav = () => {
   const socialElement = [
     {
       name: 'Telegram',
       link: 'https://telegram.me/anshuopinion',
-      icon: <FontAwesomeIcon icon={faTelegram} size="1x" />,
+      icon: <FontAwesomeIcon icon={faTelegram} width="16" />,
     },
     {
       name: 'Youtube',
       link: 'https://youtube.com/anshuopinion',
-      icon: <FontAwesomeIcon icon={faYoutube} />,
+      icon: <FontAwesomeIcon icon={faYoutube} width="16" />,
     },
     {
       name: 'Instagram',
       link: 'https://Instagram.com/anshuopinion',
-      icon: <FontAwesomeIcon icon={faInstagram} />,
+      icon: <FontAwesomeIcon icon={faInstagram} width="16" />,
     },
     {
       name: 'Facebook',
       link: 'https://Facebook.com/anshuopinion',
-      icon: <FontAwesomeIcon icon={faFacebook} />,
+      icon: <FontAwesomeIcon icon={faFacebook} width="16" />,
     },
   ];
   return (

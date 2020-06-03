@@ -9,7 +9,7 @@ const LowerNav = ({ navigations }) => {
     <div className={styles.LowerNav}>
       <ul>
         {navigations.map((navigation, i) => (
-          <Link href={navigation.slug} key={i}>
+          <Link href={`/${navigation.slug}`} key={i}>
             <a className={router.pathname === navigation.slug ? styles.active : ''}>
               {navigation.tittle}
             </a>

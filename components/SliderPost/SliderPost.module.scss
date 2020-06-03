@@ -1,0 +1,25 @@
+.RecentPost {
+  .Tittle {
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .Card {
+    border: #000 1px solid;
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    img {
+      height: 375px;
+      width: auto;
+    }
+    p {
+      padding: 1rem;
+      text-align: start;
+    }
+    h3 {
+      text-align: center;
+      font-size: 1.5rem;
+    }
+  }
+}
