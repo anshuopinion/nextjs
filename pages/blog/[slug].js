@@ -1,5 +1,6 @@
 import styles from '../../sass/[slug].module.scss';
 import fetch from 'isomorphic-unfetch';
+import MarkDown from 'react-markdown';
 export default function blog({ post }) {
   const { API_URL } = process.env;
 
@@ -15,13 +16,15 @@ export default function blog({ post }) {
 
   return (
     <div className="container">
-      {post && (
-        <div className={styles.slug}>
-          <h2>{post.tittle}</h2>
-          <img src={API_URL + url} alt={post.post_image.name} />
-          <p>{post.description}</p>
-        </div>
-      )}
+      <div className="content">
+        {post && (
+          <div className={styles.slug}>
+            <h2>{post.tittle}</h2>
+            <img src={API_URL + url} alt={post.post_image.name} />
+            <MarkDown source={post.description} />
+          </div>
+        )}
+      </div>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './UpperNav.module.scss';
-import Logo from '../../../utils/Logo/Logo';
+import Logo from '../../../public/images/Blogo.png';
 import Search from '../../../utils/Search/Search';
 import Link from 'next/link';
 
@@ -32,8 +32,8 @@ const UpperNav = () => {
   return (
     <div className={styles.UpperNav}>
       <Link href="/">
-        <a className={styles.Logo}>
-          <Logo />
+        <a>
+          <img src={Logo} alt="logo" className={styles.Logo} />
         </a>
       </Link>
       <div className={styles.WrapSearch}>

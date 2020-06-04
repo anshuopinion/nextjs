@@ -4,7 +4,7 @@ import UpperNav from '../Navigation/UpperNav/UpperNav';
 import LowerNav from '../Navigation/LowerNav/LowerNav';
 const Navigation = ({ navigations }) => {
   return (
-    <nav className="container">
+    <nav className={styles.Navigation}>
       <UpperNav />
       <LowerNav navigations={navigations} />
     </nav>

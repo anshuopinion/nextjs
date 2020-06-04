@@ -1,23 +1,42 @@
 .Footer {
   background: #000;
   color: #fff;
-  height: 15vh;
+  height: 100px;
   display: grid;
-  grid-template-columns: 7vw 1fr 7vw;
-  grid-template-rows: auto auto;
-  .Nav {
-    grid-column: 2 / 3;
-    border-top: 2px solid rgb(255, 255, 255);
-    display: flex;
+  align-content: center;
 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  .border {
+    border: 1px solid #fff;
+    margin: 1.5rem 0;
+  }
+
+  .Nav {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
     justify-content: space-between;
     align-content: center;
-
-    .NavElement {
+    .Logo {
+      height: 30px;
+      margin-top: -5px;
+    }
+    .NavElements {
       display: flex;
       flex-direction: row;
       width: 20vw;
       justify-content: space-evenly;
+
+      .NavElement {
+        color: inherit;
+        &:hover {
+          border-bottom: 2px solid #fff;
+        }
+      }
     }
   }
 }

@@ -1,3 +1,7 @@
 export default function blogList() {
-    return (<div>i am blog</div>)
+  return (
+    <div className="container">
+      <div className="content">I am blog</div>
+    </div>
+  );
 }

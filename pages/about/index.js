@@ -1,3 +1,7 @@
-const about = () => <h3>hello I am about.</h3>;
+const about = () => (
+  <div className="container">
+    <div className="content">I Am about </div>
+  </div>
+);
 
 export default about;

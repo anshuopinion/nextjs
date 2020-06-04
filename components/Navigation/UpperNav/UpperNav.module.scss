@@ -4,19 +4,29 @@
 
   .Logo {
     margin: auto 10px;
-    margin-left: 20px;
+    margin-top: 8px;
+    margin-left: 5px;
+    height: 30px;
   }
   .WrapSearch {
     display: flex;
     .Social {
       display: flex;
       margin: auto 10px;
+      justify-content: space-evenly;
       div {
         margin-right: 10px;
       }
-      justify-content: space-evenly;
-      i {
-        color: black;
+
+      a {
+        width: 5px;
+        i {
+          color: black;
+
+          &:hover {
+            color: rgb(50, 252, 24);
+          }
+        }
       }
     }
   }
