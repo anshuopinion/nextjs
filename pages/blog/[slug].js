@@ -1,4 +1,4 @@
-import styles from '../../sass/[slug].module.scss';
+import styles from '../../sass/pageScss/[slug].module.scss';
 import fetch from 'isomorphic-unfetch';
 import MarkDown from 'react-markdown';
 export default function blog({ post }) {

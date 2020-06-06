@@ -1,3 +1,5 @@
+@import '../../../sass/variable';
+
 .UpperNav {
   display: flex;
   justify-content: space-between;
@@ -21,11 +23,28 @@
       a {
         width: 5px;
         i {
-          color: black;
+          color: $secondary-color;
 
           &:hover {
             color: rgb(50, 252, 24);
           }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 499px) {
+    flex-direction: column;
+    .Logo {
+      height: 28px;
+      margin-left: 10%;
+    }
+    .WrapSearch {
+      flex-direction: column;
+      .Social {
+        div {
+          margin-top: 15px;
+          margin-right: 30px;
         }
       }
     }

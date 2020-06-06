@@ -1,0 +1,17 @@
+@import '../../../sass/variable';
+.ToolBar {
+  height: 2rem;
+  background-color: $secondary-color;
+  width: 100%;
+  i {
+    margin-left: 10px;
+    .Bars {
+      color: $light-color;
+      width: 20px;
+    }
+  }
+
+  @media (min-width: 500px) {
+    display: none;
+  }
+}

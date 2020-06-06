@@ -1,6 +1,6 @@
 import Card from '../components/Card/Card';
 import fetch from 'isomorphic-unfetch';
-import styles from '../sass/index.module.scss';
+import styles from '../sass/pageScss/index.module.scss';
 import Slider from '../components/SliderPost/SliderPost';
 import { useRouter } from 'next/router';
 const Home = ({ posts, page }) => {
@@ -8,7 +8,7 @@ const Home = ({ posts, page }) => {
   return (
     <div className="container">
       <div className="content">
-        <Slider posts={posts} />
+        {/* <Slider posts={posts} /> */}
         <div className={styles.cardContainer}>
           {posts.map((post) => (
             <Card key={post.id} post={post} />

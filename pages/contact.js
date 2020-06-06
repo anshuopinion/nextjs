@@ -1,4 +1,4 @@
-import styles from '../sass/contact.module.scss';
+import styles from '../sass/pageScss/contact.module.scss';
 import contactImage from '../public/images/img-01.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
