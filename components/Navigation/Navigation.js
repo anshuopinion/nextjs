@@ -3,9 +3,9 @@ import styles from './Navigation.module.scss';
 import UpperNav from '../Navigation/UpperNav/UpperNav';
 import LowerNav from '../Navigation/LowerNav/LowerNav';
 import SideDrawer from './SideDrawer/SideDrawer';
-import Backdrop from '../../UI/Backdrop/Backdrop';
+
 import ToolBar from './ToolBar/ToolBar';
-import Aux from '../../hoc/Aux';
+
 const Navigation = ({ navigations }) => {
   const [showSideDrawer, setShowSideDrawer] = useState(false);
   const sideDrawerClosedHandler = () => {

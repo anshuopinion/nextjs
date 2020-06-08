@@ -1,5 +1,5 @@
 @import '../../../sass/variable';
-
+@import '../../../sass/include-media';
 .LowerNav {
   ul {
     display: flex;
@@ -21,9 +21,21 @@
       border-bottom: $primary-color 3px solid;
     }
   }
-  @media (max-width: 499px) {
+
+  @include media('>phone', '<=large-phone') {
     ul {
       flex-direction: column;
+      a {
+        font-size: 1rem;
+      }
+    }
+  }
+  @include media('<=phone') {
+    ul {
+      flex-direction: column;
+      a {
+        font-size: 0.8rem;
+      }
     }
   }
 }

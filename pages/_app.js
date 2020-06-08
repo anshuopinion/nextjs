@@ -11,7 +11,7 @@ const MyApp = ({ Component, pageProps, navigations }) => {
     <>
       <Header navigations={navigations} />
       <Component {...pageProps} />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

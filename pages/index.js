@@ -8,7 +8,7 @@ const Home = ({ posts, page }) => {
   return (
     <div className="container">
       <div className="content">
-        {/* <Slider posts={posts} /> */}
+        <Slider posts={posts} />
         <div className={styles.cardContainer}>
           {posts.map((post) => (
             <Card key={post.id} post={post} />

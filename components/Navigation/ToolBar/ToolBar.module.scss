@@ -1,17 +1,58 @@
 @import '../../../sass/variable';
+@import '../../../sass/include-media';
+
 .ToolBar {
   height: 2rem;
+  display: flex;
+
   background-color: $secondary-color;
+  justify-content: space-between;
   width: 100%;
   i {
-    margin-left: 10px;
     .Bars {
       color: $light-color;
       width: 20px;
+      margin-right: 10px;
+    }
+    .Home {
+      color: $light-color;
+      width: 30px;
+      margin-left: 5px;
     }
   }
 
-  @media (min-width: 500px) {
+  // .Search {
+  //   form {
+  //     input {
+  //       margin-top: 5px;
+  //       margin-right: 5px;
+  //       height: 20px;
+  //       padding: 0 8px;
+  //       border-radius: 30px;
+  //       border: none;
+  //       font-size: 0.6rem;
+  //       background: #fff;
+  //       border-bottom: 1px solid #ccc;
+  //     }
+  //   }
+
+  // //   button {
+  // //     border-radius: none;
+  // //     background: none;
+  // //     padding: 0;
+  // //     border: none;
+  // //     &:hover {
+  // //       background: none;
+  // //       border: none;
+  // //     }
+
+  // //     i {
+  // //       color: #fff;
+  // //     }
+  // //   }
+  // // }
+
+  @include media('>=large-phone') {
     display: none;
   }
 }

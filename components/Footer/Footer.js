@@ -10,14 +10,14 @@ const Footer = () => {
           <img src={Logo} alt="logo" className={styles.Logo} />
         </div>
         <span className={styles.NavElements}>
-          <div>
+          <div className={styles.NavElement}>
             <Link href="/about">
-              <a className={styles.NavElement}>About</a>
+              <a>About</a>
             </Link>
           </div>
-          <div>
+          <div className={styles.NavElement}>
             <Link href="/contact">
-              <a className={styles.NavElement}>Contact</a>
+              <a>Contact</a>
             </Link>
           </div>
         </span>

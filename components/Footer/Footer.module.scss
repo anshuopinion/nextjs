@@ -1,5 +1,5 @@
 @import '../../sass/variable';
-
+@import '../../sass/include-media';
 .Footer {
   background: #000;
   color: #fff;
@@ -34,9 +34,63 @@
       justify-content: space-evenly;
 
       .NavElement {
-        color: inherit;
-        &:hover {
-          border-bottom: 2px solid $light-color;
+        a {
+          color: inherit;
+          &:hover {
+            border-bottom: 2px solid $light-color;
+          }
+        }
+      }
+    }
+  }
+
+  @include media('<=phone') {
+    height: 60px;
+
+    .border {
+      margin: 0.5rem 0;
+    }
+
+    .Nav {
+      .Logo {
+        height: 10px;
+        margin-top: -2px;
+        margin-left: 10px;
+      }
+      .NavElements {
+        width: 34vw;
+
+        .NavElement {
+          a {
+            font-size: 0.5rem;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  @include media('>phone', '<=large-phone') {
+    height: 60px;
+
+    .border {
+      margin: 0.7rem 0;
+    }
+
+    .Nav {
+      .Logo {
+        height: 15px;
+        margin-top: -3px;
+        margin-left: 10px;
+      }
+      .NavElements {
+        width: 20vw;
+
+        .NavElement {
+          margin-right: 10px;
+          a {
+            font-size: 0.7rem;
+          }
         }
       }
     }

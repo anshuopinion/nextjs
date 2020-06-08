@@ -1,27 +1,69 @@
 @import '../../sass/variable';
-
-.RecentPost {
-  .Tittle {
-    text-transform: uppercase;
-    text-align: center;
-  }
-
-  .Card {
-    border: $secondary-color 1px solid;
-    display: flex;
-    justify-content: flex-start;
-    text-align: center;
-    img {
-      height: 375px;
-      width: auto;
-    }
-    p {
-      padding: 1rem;
-      text-align: start;
-    }
-    h3 {
+@import '../../sass/include-media';
+.SliderContainer {
+  max-width: 960px;
+  margin: 0 auto;
+  .RecentPost {
+    .Tittle {
+      text-transform: uppercase;
       text-align: center;
-      font-size: 1.5rem;
+    }
+
+    .Card {
+      border: $secondary-color 1px solid;
+      display: flex;
+      justify-content: flex-start;
+      text-align: center;
+      img {
+        height: 375px;
+        width: auto;
+      }
+      p {
+        padding: 1rem;
+        text-align: start;
+      }
+      h3 {
+        text-align: center;
+        font-size: 1.5rem;
+      }
+    }
+  }
+  @include media('<=phone') {
+    max-width: 250px;
+    margin: 0 auto;
+    .RecentPost {
+      .Card {
+        flex-direction: column;
+        img {
+          height: 120px;
+        }
+        p {
+          font-size: 0.8rem;
+          padding: 0.5rem;
+        }
+        h3 {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  @include media('>phone', '<=large-phone') {
+    max-width: 300px;
+    margin: 0 auto;
+    .RecentPost {
+      .Card {
+        flex-direction: column;
+        img {
+          height: 160px;
+        }
+        p {
+          font-size: 0.8rem;
+          padding: 0.5rem;
+        }
+        h3 {
+          font-size: 1rem;
+        }
+      }
     }
   }
 }

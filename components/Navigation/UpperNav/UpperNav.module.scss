@@ -1,5 +1,5 @@
 @import '../../../sass/variable';
-
+@import '../../../sass/include-media';
 .UpperNav {
   display: flex;
   justify-content: space-between;
@@ -24,6 +24,9 @@
         width: 5px;
         i {
           color: $secondary-color;
+          .icon {
+            width: 22px;
+          }
 
           &:hover {
             color: rgb(50, 252, 24);
@@ -33,20 +36,34 @@
     }
   }
 
-  @media (max-width: 499px) {
+  @include media('<=phone') {
+    box-sizing: border-box;
     flex-direction: column;
     .Logo {
-      height: 28px;
-      margin-left: 10%;
+      height: 25px;
+      margin-left: 5%;
     }
     .WrapSearch {
       flex-direction: column;
+
       .Social {
         div {
           margin-top: 15px;
-          margin-right: 30px;
+          margin-right: 10px;
         }
       }
+    }
+  }
+
+  @include media('>phone', '<=large-phone') {
+    box-sizing: border-box;
+    flex-direction: column;
+    .Logo {
+      height: 32px;
+      margin-left: 2%;
+    }
+    .WrapSearch {
+      flex-direction: column;
     }
   }
 }

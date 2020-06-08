@@ -11,22 +11,22 @@ const UpperNav = () => {
     {
       name: 'Telegram',
       link: 'https://telegram.me/anshuopinion',
-      icon: <FontAwesomeIcon icon={faTelegram} width="16" />,
+      icon: <FontAwesomeIcon icon={faTelegram} className={styles.icon} width="16" size="2x" />,
     },
     {
       name: 'Youtube',
       link: 'https://youtube.com/anshuopinion',
-      icon: <FontAwesomeIcon icon={faYoutube} width="16" />,
+      icon: <FontAwesomeIcon icon={faYoutube} className={styles.icon} width="16" size="2x" />,
     },
     {
       name: 'Instagram',
       link: 'https://Instagram.com/anshuopinion',
-      icon: <FontAwesomeIcon icon={faInstagram} width="16" />,
+      icon: <FontAwesomeIcon icon={faInstagram} className={styles.icon} width="16" size="2x" />,
     },
     {
       name: 'Facebook',
       link: 'https://Facebook.com/anshuopinion',
-      icon: <FontAwesomeIcon icon={faFacebook} width="16" />,
+      icon: <FontAwesomeIcon icon={faFacebook} className={styles.icon} width="16" size="2x" />,
     },
   ];
   return (
