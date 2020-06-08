@@ -9,8 +9,8 @@ const SideDrawer = ({ navigations, show, Close, children }) => {
     <>
       <Backdrop show={show} clicked={Close} />
       <div className={classnames(show ? styles.Open : styles.Close, styles.SideDrawer)}>
-        <UpperNav />
-        <LowerNav navigations={navigations} />
+        <UpperNav clicked={Close} />
+        <LowerNav navigations={navigations} clicked={Close} />
       </div>
     </>
   );

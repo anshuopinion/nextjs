@@ -3,7 +3,6 @@
 .LowerNav {
   ul {
     display: flex;
-
     border-bottom: $light-grey 1px solid;
     a {
       padding: 5px;
@@ -25,6 +24,7 @@
   @include media('>phone', '<=large-phone') {
     ul {
       flex-direction: column;
+      border: none;
       a {
         font-size: 1rem;
       }
@@ -33,6 +33,7 @@
   @include media('<=phone') {
     ul {
       flex-direction: column;
+      border: none;
       a {
         font-size: 0.8rem;
       }

@@ -6,7 +6,7 @@ import Search from '../../../utils/Search/Search';
 import Link from 'next/link';
 
 import { faTelegram, faYoutube, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
-const UpperNav = () => {
+const UpperNav = ({ clicked }) => {
   const socialElement = [
     {
       name: 'Telegram',
@@ -32,7 +32,7 @@ const UpperNav = () => {
   return (
     <div className={styles.UpperNav}>
       <Link href="/">
-        <a>
+        <a onClick={clicked}>
           <img src={Logo} alt="logo" className={styles.Logo} />
         </a>
       </Link>
@@ -40,7 +40,7 @@ const UpperNav = () => {
         <div className={styles.Social}>
           {socialElement.map((social) => (
             <div className={`${styles}.${social.name}`} key={social.name}>
-              <a href={social.link}>
+              <a href={social.link} target="_blank">
                 <i>{social.icon}</i>
               </a>
             </div>

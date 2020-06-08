@@ -1,9 +1,10 @@
 @import '../variable';
+@import '../../sass/include-media';
 .ContainerContact {
   max-width: 800px;
   margin: 0 auto;
   width: 100%;
-  margin: 5rem auto;
+  margin: 1rem auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -143,6 +144,22 @@
             transform: translateX(10px);
           }
         }
+      }
+    }
+  }
+
+  @include media('<=large-phone') {
+    flex-direction: column;
+    .ContactForm {
+      width: 300px;
+      margin: 0 auto;
+    }
+    .ContactPic {
+      width: 200px;
+      margin: 0 auto;
+      img {
+        width: 100%;
+        justify-self: center;
       }
     }
   }

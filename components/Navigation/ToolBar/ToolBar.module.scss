@@ -2,7 +2,7 @@
 @import '../../../sass/include-media';
 
 .ToolBar {
-  height: 2rem;
+  height: 3rem;
   display: flex;
 
   background-color: $secondary-color;
@@ -11,13 +11,15 @@
   i {
     .Bars {
       color: $light-color;
-      width: 20px;
+      width: 30px;
       margin-right: 10px;
+      margin-top: 10px;
     }
     .Home {
       color: $light-color;
-      width: 30px;
+      width: 40px;
       margin-left: 5px;
+      margin-top: 10px;
     }
   }
 
