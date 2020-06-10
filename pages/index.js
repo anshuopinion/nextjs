@@ -3,10 +3,7 @@ import fetch from 'isomorphic-unfetch';
 import styles from '../sass/pageScss/index.module.scss';
 import Slider from '../components/SliderPost/SliderPost';
 import PageChanger from '../components/PageChanger/PageChanger';
-
-import { useRouter } from 'next/router';
 const Home = ({ posts, page, postSlider, postCountData }) => {
-  const router = useRouter();
   const lastPage = Math.ceil(postCountData / 3);
 
   return (
