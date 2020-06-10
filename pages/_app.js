@@ -1,11 +1,16 @@
 import Header from '../components/Header';
 import '../sass/main.scss';
-// import { config } from '@fortawesome/fontawesome-svg-core'; // 👈
-// import '@fortawesome/fontawesome-svg-core/styles.css'; // 👈
+import Router from 'next/router';
+import NProgress from 'nprogress'; //nprogress module
+import 'nprogress/nprogress.css'; //styles of nprogress//Binding events.
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-// config.autoAddCss = false; // 👈
 import Footer from '../components/Footer/Footer';
+// NProgress.configure({ showSpinner: false });
+Router.events.on('routeChangeStart', () => NProgress.start());
+Router.events.on('routeChangeComplete', () => NProgress.done());
+Router.events.on('routeChangeError', () => NProgress.done());
+
 const MyApp = ({ Component, pageProps, navigations }) => {
   return (
     <>

@@ -12,7 +12,7 @@ const Home = ({ posts, page, postSlider, postCountData }) => {
   return (
     <div className="container">
       <div className="content">
-        {/* <Slider posts={postSlider} /> */}
+        <Slider posts={postSlider} />
         <div className={styles.cardContainer}>
           {posts.map((post) => (
             <Card key={post.id} post={post} />
