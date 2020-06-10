@@ -6,7 +6,7 @@ import 'nprogress/nprogress.css'; //styles of nprogress//Binding events.
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Footer from '../components/Footer/Footer';
-// NProgress.configure({ showSpinner: false });
+NProgress.configure({ showSpinner: false });
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
