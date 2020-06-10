@@ -10,7 +10,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>AnshuOpinion</title>
+          {/* <title>AnshuOpinion</title> */}
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <body>
