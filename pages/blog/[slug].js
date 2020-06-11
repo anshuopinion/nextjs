@@ -1,7 +1,18 @@
 import styles from '../../sass/pageScss/[slug].module.scss';
 import fetch from 'isomorphic-unfetch';
 import MarkDown from 'react-markdown';
+import { NextSeo } from 'next-seo';
 export default function blog({ post }) {
+  const SEO = {
+    title: `Anshu Opinion | ${post.tittle}`,
+    description: `Anshu Opinion | ${post.description}`,
+
+    openGraph: {
+      title: `Anshu Opinion | ${post.tittle}`,
+      description: `Anshu Opinion | ${post.description}`,
+    },
+  };
+
   const { API_URL } = process.env;
 
   const {
@@ -15,17 +26,20 @@ export default function blog({ post }) {
   } = post;
 
   return (
-    <div className="container">
-      <div className="content">
-        {post && (
-          <div className={styles.slug}>
-            <h2>{post.tittle}</h2>
-            <img src={API_URL + url} alt={post.post_image.name} />
-            <MarkDown source={post.description} />
-          </div>
-        )}
+    <>
+      <NextSeo {...SEO} />
+      <div className="container">
+        <div className="content">
+          {post && (
+            <div className={styles.slug}>
+              <h2>{post.tittle}</h2>
+              <img src={API_URL + url} alt={post.post_image.name} />
+              <MarkDown source={post.description} />
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

@@ -10,10 +10,12 @@ NProgress.configure({ showSpinner: false });
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
-
+import { DefaultSeo } from 'next-seo';
+import SEO from '../next-seo.config';
 const MyApp = ({ Component, pageProps, navigations }) => {
   return (
     <>
+      <DefaultSeo {...SEO} />
       <Header navigations={navigations} />
       <Component {...pageProps} />
       <Footer />

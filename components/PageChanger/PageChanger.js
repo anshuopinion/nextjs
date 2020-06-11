@@ -29,16 +29,18 @@ const PageChanger = ({ page, lastPage }) => {
             </a>
           </button>
           {}
-          {noOfPages.map((page, i) => (
-            <li className={styles.pageNumber} key={i}>
-              <a
-                onClick={() => router.push(`/?page=${page}`)}
-                className={router.asPath === `/?page=${page}` ? styles.active : ''}
-              >
-                {page}
-              </a>
-            </li>
-          ))}
+          <div className={styles.pagenoContainer}>
+            {noOfPages.map((page, i) => (
+              <li className={styles.pageNumber} key={i}>
+                <a
+                  onClick={() => router.push(`/?page=${page}`)}
+                  className={router.asPath === `/?page=${page}` ? styles.active : ''}
+                >
+                  {page}
+                </a>
+              </li>
+            ))}
+          </div>
           <button
             className={styles.Next}
             disabled={page >= lastPage}
