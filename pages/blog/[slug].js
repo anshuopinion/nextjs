@@ -42,23 +42,26 @@ export default function blog({ post }) {
   );
 }
 
-export async function getStaticPaths(context) {
+export async function getStaticPaths() {
   const { API_URL } = process.env;
   const res = await fetch(`${API_URL}/posts`);
-  const post = await res.json();
+  const posts = await res.json();
+
+  const path = posts.map((post) => ({
+    params: {
+      slug: post.slug,
+    },
+  }));
   return {
-    paths: post.map((post) => ({
-      params: {
-        slug: post.slug,
-      },
-    })),
+    paths: path,
     fallback: false,
   };
 }
 
-export async function getStaticProps() {
+export async function getStaticProps({ params }) {
+  const { slug } = params;
   const { API_URL } = process.env;
-  const res = await fetch(`${API_URL}/posts`);
+  const res = await fetch(`${API_URL}/posts/?slug=${slug}`);
   const post = await res.json();
   return {
     props: {

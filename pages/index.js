@@ -25,7 +25,7 @@ const Home = ({ posts, page, postSlider, postCountData }) => {
 };
 export default Home;
 
-// export async function getStaticProps() {
+export async function getStaticProps() {
 //   const page = 1;
 //   const start = +page === 1 ? 0 : (+page - 1) * 3;
 //   const { API_URL } = process.env;
