@@ -1,11 +1,13 @@
-import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './UpperNav.module.scss';
 import Logo from '../../../public/images/Blogo.png';
 import Search from '../../../utils/Search/Search';
 import Link from 'next/link';
 
-import { faTelegram, faYoutube, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons/faFacebook';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram';
+import { faTelegram } from '@fortawesome/free-brands-svg-icons/faTelegram';
+import { faYoutube } from '@fortawesome/free-brands-svg-icons/faYoutube';
 const UpperNav = ({ clicked }) => {
   const socialElement = [
     {

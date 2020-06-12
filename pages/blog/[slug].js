@@ -1,5 +1,4 @@
 import styles from '../../sass/pageScss/[slug].module.scss';
-import fetch from 'isomorphic-unfetch';
 import MarkDown from 'react-markdown';
 import { NextSeo } from 'next-seo';
 export default function blog({ post }) {

@@ -6,7 +6,7 @@ import SideDrawer from './SideDrawer/SideDrawer';
 
 import ToolBar from './ToolBar/ToolBar';
 
-const Navigation = ({ navigations }) => {
+const Navigation = () => {
   const [showSideDrawer, setShowSideDrawer] = useState(false);
   const sideDrawerClosedHandler = () => {
     setShowSideDrawer(false);
@@ -18,10 +18,10 @@ const Navigation = ({ navigations }) => {
     <nav className={styles.Navigation}>
       <div className={styles.ToolBar}>
         <UpperNav />
-        <LowerNav navigations={navigations} />
+        <LowerNav />
       </div>
       <ToolBar open={sideDrawerShowHandler} />
-      <SideDrawer navigations={navigations} show={showSideDrawer} Close={sideDrawerClosedHandler} />
+      <SideDrawer show={showSideDrawer} Close={sideDrawerClosedHandler} />
     </nav>
   );
 };

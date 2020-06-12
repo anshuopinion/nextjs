@@ -1,8 +1,11 @@
-import Card from '../components/Card/Card';
-import fetch from 'isomorphic-unfetch';
 import styles from '../sass/pageScss/index.module.scss';
-import Slider from '../components/SliderPost/SliderPost';
-import PageChanger from '../components/PageChanger/PageChanger';
+import dynamic from 'next/dynamic';
+const Card = dynamic(import('../components/Card/Card'));
+const Slider = dynamic(import('../components/SliderPost/SliderPost'), {
+  loading: () => <p>Loading...</p>,
+});
+const PageChanger = dynamic(import('../components/PageChanger/PageChanger'));
+
 const Home = ({ posts, page, postSlider, postCountData }) => {
   const lastPage = Math.ceil(postCountData / 3);
 

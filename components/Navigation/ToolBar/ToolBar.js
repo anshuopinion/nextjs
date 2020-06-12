@@ -1,8 +1,9 @@
 import styles from './ToolBar.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faHome } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons/faBars';
+import { faHome } from '@fortawesome/free-solid-svg-icons/faHome';
 
-const ToolBar = ({ open }, props) => {
+const ToolBar = ({ open }) => {
   return (
     <div className={styles.ToolBar}>
       <div>

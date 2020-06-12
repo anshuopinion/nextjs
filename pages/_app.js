@@ -12,22 +12,19 @@ Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
 import { DefaultSeo } from 'next-seo';
 import SEO from '../next-seo.config';
+// import ContextWrapper from '../components/ContextWrapper';
+
 const MyApp = ({ Component, pageProps, navigations }) => {
   return (
     <>
       <DefaultSeo {...SEO} />
-      <Header navigations={navigations} />
+
+      <Header />
+
       <Component {...pageProps} />
       <Footer />
     </>
   );
-};
-
-MyApp.getInitialProps = async () => {
-  const { API_URL } = process.env;
-  const res = await fetch(`${API_URL}/navigations`);
-  const navigations = await res.json();
-  return { navigations: navigations };
 };
 
 export default MyApp;

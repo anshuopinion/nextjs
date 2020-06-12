@@ -1,16 +1,15 @@
-import React from 'react';
 import styles from './PageChanger.module.scss';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons/faArrowLeft';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons/faArrowRight';
 const PageChanger = ({ page, lastPage }) => {
+  const router = useRouter();
   const noOfPages = [];
-  for (let i = 1; i <= lastPage; i++) {
+  const mainPagePath = '/';
+  for (let i = 2; i <= lastPage; i++) {
     noOfPages.push(i);
   }
-
-  const router = useRouter();
 
   return (
     <div className="container">
@@ -28,8 +27,11 @@ const PageChanger = ({ page, lastPage }) => {
               prev
             </a>
           </button>
-          {}
+
           <div className={styles.pagenoContainer}>
+            <li className={styles.pageNumber}>
+              <a className={router.asPath === `${mainPagePath}` ? styles.active : ''}>1</a>
+            </li>
             {noOfPages.map((page, i) => (
               <li className={styles.pageNumber} key={i}>
                 <a

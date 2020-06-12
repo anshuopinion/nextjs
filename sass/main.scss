@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
-
 @import './variable'; // $color-primary: rgb(31, 255, 31);
 
 * {
@@ -13,8 +12,6 @@ html {
   height: 100%;
 }
 body {
-  // display: flex;
-  // flex-direction: column;
   min-height: 100vh;
   position: relative;
   padding-bottom: 100px;
@@ -24,16 +21,18 @@ body {
 // progress bar css
 
 #nprogress .bar {
-  background: #00ff37 !important;
+  background: $primary-color !important;
 }
 #nprogress .peg {
-  box-shadow: 0 0 10px #00ff37, 0 0 5px #00ff37 !important;
+  box-shadow: 0 0 10px $primary-color, 0 0 5px $primary-color !important;
 }
 
 #nprogress .spinner-icon {
-  border-top-color: #00ff37 !important;
-  border-left-color: #00ff37 !important;
+  border-top-color: $primary-color !important;
+  border-left-color: $primary-color !important;
 }
+
+// Default element
 
 ul {
   list-style-type: none;

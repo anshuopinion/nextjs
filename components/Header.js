@@ -1,8 +1,8 @@
 import Navigation from '../components/Navigation/Navigation';
-const Header = ({ navigations }) => {
+const Header = () => {
   return (
     <header>
-      <Navigation navigations={navigations} />
+      <Navigation />
     </header>
   );
 };
