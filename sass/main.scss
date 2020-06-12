@@ -21,6 +21,20 @@ body {
   font-family: 'Acme', sans-serif;
 }
 
+// progress bar css
+
+#nprogress .bar {
+  background: #00ff37 !important;
+}
+#nprogress .peg {
+  box-shadow: 0 0 10px #00ff37, 0 0 5px #00ff37 !important;
+}
+
+#nprogress .spinner-icon {
+  border-top-color: #00ff37 !important;
+  border-left-color: #00ff37 !important;
+}
+
 ul {
   list-style-type: none;
 }
