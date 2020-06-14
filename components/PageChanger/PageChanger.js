@@ -1,5 +1,5 @@
 import styles from './PageChanger.module.scss';
-
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons/faArrowLeft';
@@ -18,51 +18,48 @@ const PageChanger = ({ page, lastPage }) => {
     <div className="container">
       <div className={styles.PageChanger}>
         <ul>
-          <button
-            className={styles.Prev}
-            disabled={page <= 1}
-            onClick={() => router.push(page === 2 ? `${mainPagePath}` : `/${page - 1}`)}
+          <Link
+            href={page === 2 ? `${mainPagePath}` : `/[currentPage]`}
+            as={page === 2 ? `${mainPagePath}` : `/${page - 1}`}
           >
-            <a>
-              <i>
-                <FontAwesomeIcon icon={faArrowLeft} />
-              </i>
-              prev
-            </a>
-          </button>
+            <button className={styles.Prev} disabled={page <= 1}>
+              <a>
+                <i>
+                  <FontAwesomeIcon icon={faArrowLeft} />
+                </i>
+                prev
+              </a>
+            </button>
+          </Link>
 
           <div className={styles.pagenoContainer}>
-            <li className={styles.pageNumber}>
-              <a
-                onClick={() => router.push(`${mainPagePath}`)}
-                className={router.asPath === `${mainPagePath}` ? styles.active : ''}
-              >
-                1
-              </a>
-            </li>
-            {noOfPages.map((page, i) => (
-              <li className={styles.pageNumber} key={i}>
-                <a
-                  onClick={() => router.push(`/${page}`)}
-                  className={router.asPath === `/${page}` ? styles.active : ''}
-                >
-                  {page}
-                </a>
+            <Link href={`${mainPagePath}`}>
+              <li className={styles.pageNumber}>
+                <a className={router.asPath === `${mainPagePath}` ? styles.active : ''}>1</a>
               </li>
+            </Link>
+            {noOfPages.map((page, i) => (
+              <Link href="/[currentPage]" as={`/${page}`}>
+                <li className={styles.pageNumber} key={i}>
+                  <a className={router.asPath === `/${page}` ? styles.active : ''}>{page}</a>
+                </li>
+              </Link>
             ))}
           </div>
-          <button
-            className={styles.Next}
-            disabled={page >= lastPage}
-            onClick={() => router.push(`/${page + 1}`)}
-          >
-            <a>
-              next
-              <i>
-                <FontAwesomeIcon icon={faArrowRight} />
-              </i>
-            </a>
-          </button>
+          <Link href="/[currentPage]" as={`/${page + 1}`}>
+            <button
+              className={styles.Next}
+              disabled={page >= lastPage}
+              // onClick={() => router.push(`/${page + 1}`)}
+            >
+              <a>
+                next
+                <i>
+                  <FontAwesomeIcon icon={faArrowRight} />
+                </i>
+              </a>
+            </button>
+          </Link>
         </ul>
       </div>
     </div>
