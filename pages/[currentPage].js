@@ -11,11 +11,7 @@ export async function getStaticPaths() {
   const paths = Array(lastPage)
     .fill('')
     .map((_, index) => {
-      if (index >= 1) {
-        return { params: { currentPage: (index + 1).toString() } };
-      } else {
-        return { params: { currentPage: '' } };
-      }
+      return { params: { currentPage: (index + 1).toString() } };
     });
 
   return {
