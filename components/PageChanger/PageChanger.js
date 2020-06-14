@@ -6,7 +6,7 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons/faArrowLeft';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons/faArrowRight';
 const PageChanger = ({ page, lastPage }) => {
   const router = useRouter();
-  console.log(page);
+
   const noOfPages = [];
   const mainPagePath = '/';
 
@@ -21,7 +21,7 @@ const PageChanger = ({ page, lastPage }) => {
           <button
             className={styles.Prev}
             disabled={page <= 1}
-            onClick={() => router.push(`/${page - 1}`)}
+            onClick={() => router.push(page === 2 ? `${mainPagePath}` : `/${page - 1}`)}
           >
             <a>
               <i>
