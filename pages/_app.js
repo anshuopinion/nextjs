@@ -12,8 +12,6 @@ Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
 import { DefaultSeo } from 'next-seo';
 import SEO from '../next-seo.config';
-// import ContextWrapper from '../components/ContextWrapper';
-
 const MyApp = ({ Component, pageProps, navigations }) => {
   return (
     <>
